@@ -1,0 +1,253 @@
+* {
+  /*Resets the default spacing*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Basic styles*/
+body {
+  font-family: Ariel, sans-serif;
+  background: linear-gradient(
+    to bottom,
+    white,
+    black
+  ); /*Sets the color from top to bottom white to grey*/
+}
+header {
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  display: block; /*Makes the image in a block element only*/
+  margin: 20px auto;
+  width: 240px; /*This strehes the image across the viewport and makes the image bigger*/
+  border-radius: 20px; /*Curves the borders to the element*/
+}
+.hero {
+  display: flex; /*All figure and nav will be arranged in horizontally in a column*/
+  flex-direction: column; /*Specify its direction how to show the child as it will show vertically*/
+  align-items: center; /*Center the elements int he center*/
+  gap: 40px;
+  margin-top: 20px;
+}
+nav {
+  /*creates a border line at the top and the bottom as well */
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  max-width: 500px; /*How much can the width go on different screens*/
+  margin: 0 auto; /*For margin the the top and bottom space should be 0 and left/right by automatically from the other*/
+  margin-bottom: 20px; /*space between nav and the figure*/
+}
+/*Avoiding the clashes in the figure tablet and nav elements*/
+nav .nav {
+  margin-bottom: 40px;
+}
+/*Syling the logo */
+.logo {
+  width: 100px;
+  height: auto;
+  display: block; /*To make the element block,and in a subsection */
+  margin: 0 auto;
+}
+nav ul {
+  list-style: none;
+  padding: 10px 0; /**Adding space inside the nav list*/
+}
+nav li {
+  /*This below get rid of the bullet point*/
+  list-style-type: none;
+}
+nav ul li {
+  display: inline-block; /*Allow the items to be in a  line like a inline elements but still allow to change the width,height etc*/
+  margin: 10px; /*Sets the margin on all sides of space 10px*/
+}
+
+nav ul li a {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none; /*This removes the underline from the hyperlinks */
+  border-radius: 10px;
+  font-weight: bold; /*To make the fonts more boldder*/
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /*Adds the shadow in the items*/
+  transition: background-color 0.3 ease, transform 0.2 ease; /*Takes 0.3 sec to change to the color,take 0.2 sec when the elements takes it shape or rotates it*/
+}
+nav ul li a:hover {
+  background-color: grey; /*This will change the color when you try hover upoun it*/
+  transform: scale(1.05);
+}
+/*Styling tablet to give some space and dont let them collapse with each other*/
+.tablet {
+  display: block; /*To make the element block*/
+  text-align: center;
+  margin: 40px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+  width: fit-content; /*Keeps the image in the natural size*/
+}
+/*Styling the Main title*/
+.title {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 1em;
+  color: black;
+  text-shadow: 2px 2px 5px grey;
+}
+/*Making the layout colums(Rows+ columns)*/
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.column {
+  background-color: white;
+  padding: 15px; /*Puts the space b/w content and border of about 20 px on all sides*/
+  margin: 10px;
+  border-radius: 15px; /*Adds the corners in the items */
+  flex: 1;
+  min-width: 200px; /*Makes the width minimun and does not streches it--Not smaller than 200px*/
+}
+.left {
+  flex: 1;
+}
+.center {
+  flex: 1;
+}
+.right {
+  flex: 1;
+}
+/*Styling the figure the image*/
+figure img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover; /*Avoids the image from streching*/
+  margin-bottom: 10px;
+}
+figure {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: fit-content; /*Make the element size  as its content size not full not min*/
+  margin-top: 1000px;
+}
+figure .tablet {
+  text-align: center;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/*Improving the layout and spacing */
+.column p {
+  margin-bottom: 1em;
+}
+
+main {
+  padding: 30px;
+  margin-top: 2em; /*em means multiply to its current font size*/
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/*Styling the footer*/
+footer {
+  /*creates a border line at the top and the bottom as well */
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  border-top-left-radius: 20px; /*Rounding the couner in the given area*/
+  border-top-right-radius: 20px;
+  margin-top: 40px;
+}
+footer a {
+  color: blue;
+}
+/*Adding the responsive design to it--(Mobile view)*/
+/*You are creating this screen for the mobile device and all the media queries(Css style according to the device page) will be in that*/
+/*Mobile device*/
+/*Media query*/
+@media screen and (max-width: 768px) {
+  /*Apply these when the screeen size is 768 or below it*/
+  .hero {
+    padding: 20px;
+  }
+  .nav {
+    width: 100%;
+    max-width: 600px; /*It cannot exeed the 600px beyond it*/
+    margin-bottom: 30px; /*Adding space in it so the nav and figure dont collapse wiht each other*/
+  }
+  .tablet {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .row {
+    flex-direction: column; /*This means the items will be in verically columns intead of side by side*/
+    align-items: center;
+    padding: 10px;
+  }
+  .nav {
+    margin-bottom: 40px;
+  }
+
+  nav ul li {
+    display: block; /*This allow the list items to be in a seperate subsection*/
+    margin: 10px 0;
+  }
+  .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .logo {
+    width: 80px;
+  }
+  figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  figure .tablet {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/*End of tablet*/
+/*Begin desktop*/
+@media screen and (max-width: 960px) {
+  header {
+    text-align: left;
+  }
+  header img {
+    display: block;
+    margin: 20px auto;
+    width: 240px;
+    border-radius: 20px;
+  }
+
+  nav {
+    float: left; /*This makes the element float to the right hand side*/
+    margin-top: -2; /*This should move the element above so normally it would move up*/
+    width: 60%;
+  }
+  nav ul li {
+    display: inline-block; /*This allow the list items to be streched horizontally*/
+    border-radius: 1em;
+
+    /*border-radius: 1em;*/
+  }
+}
