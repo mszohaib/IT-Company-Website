@@ -95,6 +95,26 @@ nav .nav {
 }
 /*Ending the Enroll page styles*/
 /*Starting the Contact page styles*/
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 10px;
+}
+.contact-form button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: pointer;
+  border: solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
 /*Ending the Contact page styles*/
 
