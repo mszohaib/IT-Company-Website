@@ -53,6 +53,16 @@ nav .nav {
   display: block; /*To make the element block,and in a subsection */
   margin: 0 auto;
 }
+/*Adding stlyes to the about page*/
+.about-img {
+  max-width: 200px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+/*Finishing the about page styles*/
+/*Staring the classess page styles*/
+
 nav ul {
   list-style: none;
   padding: 10px 0; /**Adding space inside the nav list*/
