@@ -78,8 +78,26 @@ nav .nav {
 }
 /*Ending the classess page styles*/
 /*Starting the Enroll page styles*/
-
+.course-card {
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+.course-card button {
+  padding: 10px;
+  background-color: black;
+  border: solid;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
 /*Ending the Enroll page styles*/
+/*Starting the Contact page styles*/
+
+/*Ending the Contact page styles*/
+
 nav ul {
   list-style: none;
   padding: 10px 0; /**Adding space inside the nav list*/
