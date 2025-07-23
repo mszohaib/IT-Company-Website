@@ -62,7 +62,24 @@ nav .nav {
 }
 /*Finishing the about page styles*/
 /*Staring the classess page styles*/
+.class-table {
+  width: 100%;
+  border-collapse: collapse; /*Makes the border lines and merged them togther*/
+  margin-top: 20px;
+}
+.class-table th,
+.class-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+.class-table th {
+  background-color: #eee;
+}
+/*Ending the classess page styles*/
+/*Starting the Enroll page styles*/
 
+/*Ending the Enroll page styles*/
 nav ul {
   list-style: none;
   padding: 10px 0; /**Adding space inside the nav list*/
