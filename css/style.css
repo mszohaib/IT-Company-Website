@@ -13,7 +13,20 @@ body {
     black
   ); /*Sets the color from top to bottom white to grey*/
 }
-header {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.section {
+  margin-bottom: 30px;
+}
+img header {
   padding: 20px;
   text-align: center;
 }
@@ -54,12 +67,23 @@ nav .nav {
   margin: 0 auto;
 }
 /*Adding stlyes to the about page*/
-.about-img {
-  max-width: 200px;
-  display: block;
-  margin: 20px auto;
+.content-container {
+  background-color: white;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 15px;
+  max-width: 1000px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: black;
+  text-align: center;
+}
+.content-container img {
+  max-width: 100%;
+  margin-top: 20px auto;
+  height: auto;
   border-radius: 20px;
 }
+
 /*Finishing the about page styles*/
 /*Staring the classess page styles*/
 .class-table {
@@ -69,12 +93,13 @@ nav .nav {
 }
 .class-table th,
 .class-table td {
-  border: 1px solid #ccc;
+  border: 1px solid black;
   padding: 10px;
   text-align: center;
+  background-color: white;
 }
 .class-table th {
-  background-color: #eee;
+  background-color: white;
 }
 /*Ending the classess page styles*/
 /*Starting the Enroll page styles*/
@@ -165,13 +190,12 @@ nav ul li a:hover {
   text-shadow: 2px 2px 5px grey;
 }
 /*Making the layout colums(Rows+ columns)*/
-.row {
+.flex-row {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 20px;
+  gap: 20px;
 }
-.column {
+.flex-column {
   background-color: white;
   padding: 15px; /*Puts the space b/w content and border of about 20 px on all sides*/
   margin: 10px;
@@ -289,6 +313,9 @@ footer a {
     display: block;
     text-align: center;
     margin-top: 20px;
+  }
+  .flex-row {
+    flex-direction: column;
   }
 }
 
